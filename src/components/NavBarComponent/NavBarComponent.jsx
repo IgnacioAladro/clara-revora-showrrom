@@ -15,7 +15,7 @@ const NavBarComponent = () => {
             <div className="container">
                 <p>
                     <a href="tel:+542324504614" className="sinDeco">+54 9 2324 504614</a> |{' '}
-                    <a href="mailto:clararevora@gmail.com" target="_blank" rel="noopener noreferrer" className="sinDeco">
+                    <a href="mailto:clararevora16@gmail.com" target="_blank" rel="noopener noreferrer" className="sinDeco">
                         clararevora@gmail.com
                     </a>
                 </p>
@@ -29,8 +29,8 @@ const NavBarComponent = () => {
                                 <img src={logo} alt="Logo de Clara Revora Showroom" />
                             </a>
                         </div>
-                        <div className=''>
-                            <Nav className="me-auto gap-5">
+                        <div>
+                            <Nav className="me-auto gap-5 me-navBar-style">
                                 <Nav.Link href="#new-in">NEW IN</Nav.Link>
                                 <Nav.Link href="#tienda">TIENDA</Nav.Link>
                                 <Nav.Link href="#rebajas">REBAJAS</Nav.Link>

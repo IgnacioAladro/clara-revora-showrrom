@@ -13,9 +13,16 @@ const App = () => {
 
   return (
 
-    <div className="navBar">
-      <NavBarComponent />
-      <ItemListContainer greeting={"Descubre las últimas tendencias. ¡Explora nuestra colección ahora!"} />
+    <div className="me-app-style">
+
+      <div className="me-navBar-style">
+        <NavBarComponent />
+      </div>
+
+      <div className="me-itemListContainer-style">
+        <ItemListContainer greeting={"Descubre las últimas tendencias. ¡Explora nuestra colección ahora!"} />
+      </div>
+
     </div>
 
   );

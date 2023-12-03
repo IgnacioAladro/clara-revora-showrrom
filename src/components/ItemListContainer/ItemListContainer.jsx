@@ -6,7 +6,7 @@ const ItemListContainer = ({greeting}) => {
 
     <div className="text-center">
       <h1>Bienvenida</h1>
-      <p>{greeting}</p>
+      <h5>{greeting}</h5>
     </div>
 
   );
