@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import "./NavBarComponent.css";
+import logo from './imgs/logo.png';
 
 
 const NavBarComponent = () => {
@@ -23,8 +24,8 @@ const NavBarComponent = () => {
             <div>
                 <Navbar data-bs-theme="light">
                     <Container>
-                        <a href="#home">
-                            <img src="imgs/logo.png" alt="" />
+                        <a href="index.html">
+                            <img src={logo} alt="Logo de Clara Revora Showroom" />
                         </a>
                         <Nav className="me-auto">
                             <Nav.Link href="#new-in">NEW IN</Nav.Link>
