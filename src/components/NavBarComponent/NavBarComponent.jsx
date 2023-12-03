@@ -39,7 +39,7 @@ const NavBarComponent = () => {
             </div>
 
         </div>
-    );
+    ); 
 
 };
 

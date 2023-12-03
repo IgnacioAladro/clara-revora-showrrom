@@ -1,5 +1,6 @@
 //--> Components
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
 //--> Styles
@@ -14,6 +15,7 @@ const App = () => {
 
     <div className="navBar">
       <NavBarComponent />
+      <ItemListContainer />
     </div>
 
   );
