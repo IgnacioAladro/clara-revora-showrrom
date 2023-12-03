@@ -23,17 +23,21 @@ const NavBarComponent = () => {
         
             <div>
                 <Navbar data-bs-theme="light">
-                    <Container>
-                        <a href="index.html">
-                            <img src={logo} alt="Logo de Clara Revora Showroom" />
-                        </a>
-                        <Nav className="me-auto">
-                            <Nav.Link href="#new-in">NEW IN</Nav.Link>
-                            <Nav.Link href="#tienda">TIENDA</Nav.Link>
-                            <Nav.Link href="#rebajas">REBAJAS</Nav.Link>
-                            <Nav.Link href="#como-comprar">COMO COMPRAR</Nav.Link>
-                            <Nav.Link href="#contacto">CONTACTO</Nav.Link>
-                        </Nav>
+                    <Container className='d-flex justify-content-between'>
+                        <div>
+                            <a href="index.html">
+                                <img src={logo} alt="Logo de Clara Revora Showroom" />
+                            </a>
+                        </div>
+                        <div className=''>
+                            <Nav className="me-auto gap-5">
+                                <Nav.Link href="#new-in">NEW IN</Nav.Link>
+                                <Nav.Link href="#tienda">TIENDA</Nav.Link>
+                                <Nav.Link href="#rebajas">REBAJAS</Nav.Link>
+                                <Nav.Link href="#como-comprar">COMO COMPRAR</Nav.Link>
+                                <Nav.Link href="#contacto">CONTACTO</Nav.Link>
+                            </Nav>
+                        </div>
                     </Container>
                 </Navbar>
             </div>
