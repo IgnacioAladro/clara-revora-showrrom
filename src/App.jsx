@@ -15,7 +15,7 @@ const App = () => {
 
     <div className="navBar">
       <NavBarComponent />
-      <ItemListContainer />
+      <ItemListContainer greeting={"Descubre las últimas tendencias. ¡Explora nuestra colección ahora!"} />
     </div>
 
   );

@@ -1,10 +1,13 @@
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
 
   return (
 
-    <div>ItemListContainer</div>
+    <div>
+      <h1>Bienvenida</h1>
+      <p>{greeting}</p>
+    </div>
 
   );
 
