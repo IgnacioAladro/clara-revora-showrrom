@@ -1,8 +1,5 @@
 .sinDeco {
     text-decoration: none !important;
     color: black !important;
+    font-size: medium;
 };
-
-.me-navBar-style {
-    font-weight: bold !important;
-}
