@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import "./NavBarComponent.css";
-import logo from './imgs/logo.png';
+import logo from '../../images/logo.png';
 
 
 const NavBarComponent = () => {
