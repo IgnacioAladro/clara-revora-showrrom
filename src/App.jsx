@@ -1,32 +1,25 @@
-//--> Components
-import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import { MainRouter } from "./router/MainRouter";
 
-
-//--> Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./App.css";
-
 
 
 const App = () => {
 
-  return (
+  return (    
 
-    <div className="me-app-style">
+    <div style={{ width: '100vw', height: '100vh' }}>
 
-      <div className="me-navBar-style">
-        <NavBarComponent />
+      <div>
+        <MainRouter />
       </div>
 
-      <div className="me-itemListContainer-style">
-        <ItemListContainer greeting={"Descubre las últimas tendencias. ¡Explora nuestra colección ahora!"} />
-      </div>
+   {/*    <div>
+        <h1>Bienvenida</h1>
+        <h2>Descubre las últimas tendencias. ¡Explora nuestra colección ahora!</h2>
+      </div> */}
 
     </div>
-
   );
-
 };
 
 export default App;
