@@ -3,11 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import "./NavBarComponent.css";
-
 import logo from '../../assets/images/logo.png';
-
 import CartWidgetComponent from './CartWidgetComponent/CartWidgetComponent';
+import './NavBarComponent.css';
 
 import { useCategory } from '../../hooks/useCategories';
 
@@ -23,7 +21,7 @@ const NavBarComponent = () => {
 
     return (
 
-        <div>
+        <div className='me-app-style'>
 
             <div className="container">
                 <p>
@@ -46,7 +44,7 @@ const NavBarComponent = () => {
 
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto gap-5 me-navBar-style">
+                            <Nav className="me-auto gap-5">
                                 <Nav.Link href="/">NEW IN</Nav.Link>
                                 <NavDropdown title="TIENDA" id="basic-nav-dropdown">
                                     {category.map((item, index) => {
