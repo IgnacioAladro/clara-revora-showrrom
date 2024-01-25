@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useCartContext } from "../../context/CartContext.jsx";
 import './ItemCount.css'
+import Swal from 'sweetalert2'
 
 const ItemCount = ({productId}) => {
     const [ countItem, setCountItem ] = useState(0);
@@ -21,6 +22,12 @@ const ItemCount = ({productId}) => {
         if (countItem > 0) {
             addItemToCart(productId, countItem);
             setCountItem(0);
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 2500
+            });
         }
     };
 
