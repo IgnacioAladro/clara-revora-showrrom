@@ -8,9 +8,7 @@ import { Category } from '../pages/Category';
 
 
 export const MainRouter = () => {
-
   return (
-
     <BrowserRouter>
         <NavBarComponent />
         <Routes>

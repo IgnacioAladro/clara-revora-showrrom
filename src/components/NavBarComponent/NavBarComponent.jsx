@@ -7,22 +7,16 @@ import logo from '../../assets/images/logo.png';
 import CartWidgetComponent from './CartWidgetComponent/CartWidgetComponent';
 import './NavBarComponent.css';
 
-import { useCategory } from '../../hooks/useCategories';
+import { useGetCategories } from '../../hooks/useProducts';
 
 import { Link } from 'react-router-dom';
 
 
-
-
-
 const NavBarComponent = () => {
-
-    const { category } = useCategory();
+    const { categories } = useGetCategories();
 
     return (
-
         <div className='me-app-style'>
-
             <div className="container">
                 <p>
                     <a href="tel:+542324504614" className="sinDeco">+54 9 2324 504614</a> |{' '}
@@ -35,23 +29,19 @@ const NavBarComponent = () => {
             <div>
                 <Navbar data-bs-theme="light">
                     <Container className='d-flex justify-content-between'>
-
                         <div>
                             <a href="/">
                                 <img src={logo} alt="Logo de Clara Revora Showroom" />
                             </a>
                         </div>
-
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto gap-5">
-                                <Nav.Link href="/">NEW IN</Nav.Link>
-                                <NavDropdown title="TIENDA" id="basic-nav-dropdown">
-                                    {category.map((item, index) => {
+                                <NavDropdown title="CATEGORIAS" id="basic-nav-dropdown">
+                                    {categories.map((category, index) => {
                                         return (
-
                                             <NavDropdown.Item key={index}>
-                                                <Link to={`/category/${item}`}>{item}</Link>
+                                                <Link key={index} to={`/category/${category}`}>{category}</Link>
                                             </NavDropdown.Item>
                                         );
                                     })}
@@ -60,11 +50,9 @@ const NavBarComponent = () => {
                                 <Nav.Link href="#como-comprar">COMO COMPRAR</Nav.Link>
                                 <Nav.Link href="#contacto">CONTACTO</Nav.Link>
                             </Nav>
-
                             <div>
                                 <CartWidgetComponent />
                             </div>
-
                         </Navbar.Collapse>                            
                     </Container>
                 </Navbar>
