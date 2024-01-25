@@ -23,8 +23,7 @@ export const ItemDetailContainer = () => {
               <Card.Text>{productData.description}</Card.Text>
               <div>{productData.price}</div>
               <ItemCount productId={productData.id} />
-              <Button variant="primary" style={{ margin: 20 }}>Añadir al carrito</Button>
-              <Button variant="primary">Añadir a deseados</Button>
+              <Button variant="primary" style={{ margin: '1rem' }}>Añadir a deseados</Button>
           </Card.Body>
       </Card>
     </div>
