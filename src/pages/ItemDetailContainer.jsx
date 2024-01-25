@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 import { useParams } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
@@ -7,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import { useGetProductById } from '../hooks/useProducts';
 import ItemCount from '../components/ItemCountComponent/ItemCount';
+import './ItemDetailContainer.css'
 
 
 export const ItemDetailContainer = () => {
@@ -16,8 +16,8 @@ export const ItemDetailContainer = () => {
   useEffect(() => {document.title = "Clara Revora Showroom - " + productData.title});
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <Card key={productData.id} style={{ width: '40rem', margin: 10 }}>
+    <div className='mi-item-detail-container'>
+      <Card key={productData.id}>
           <Card.Img variant="top" src={productData.thumbnail} />
           <Card.Body>
               <Card.Title>{productData.title}</Card.Title>
