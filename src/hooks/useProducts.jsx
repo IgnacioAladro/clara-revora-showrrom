@@ -53,15 +53,15 @@ export const useGetProductByCategory = (category) => {
     const fetchProductsByCategory = async () => {
       const db = getFirestore();
       const productsCollection = collection(db, 'products');
-      const q = query(productsCollection, where('category', '==', category));
+      const categoryQuery = query(productsCollection, where('category', '==', category));
 
       try {
-        const snapshot = await getDocs(q);
+        const snapshot = await getDocs(categoryQuery);
         const products = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setProductsData(products);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching products by category:', error);
+        console.error('Error trayendo las categorias', error);
         setLoading(false);
       }
     };
@@ -71,38 +71,3 @@ export const useGetProductByCategory = (category) => {
 
   return { productsData, loading };
 };
-
-
-
-
-
-/* export const useGetProductByCategory = (category) => {
-  const [productsData, setProductsData] = useState([]);
-
-  useEffect(() => { 
-    getProductByCategory(category) 
-      .then((response) => { 
-        setProductsData(response.data.products)
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  }, [category]);
-  return { productsData };
-}; */
-
-/* export const useGetProductByCategory = (collectionName = 'products') => {
-  const [productsData, setProductsData] = useState([]);
-
-  useEffect(() => {
-    const db = getFirestore();
-    const productsCollection = collection(db, collectionName)
-
-    getDocs(productsCollection).then((snapshot) => {
-      const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-      setProductsData(products)
-    })
-  })
-
-  return (productsData);
-}; */
