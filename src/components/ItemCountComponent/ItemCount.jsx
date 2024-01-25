@@ -1,6 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useCartContext } from "../../context/CartContext.jsx";
+import './ItemCount.css'
 
 const ItemCount = ({productId}) => {
     const [ countItem, setCountItem ] = useState(0);
@@ -19,24 +20,16 @@ const ItemCount = ({productId}) => {
     const handleAddProductToCart = () => { 
         if (countItem > 0) {
             addItemToCart(productId, countItem);
-            setCountItem(0); // Restablece el contador a 0 después de agregar el producto al carrito
+            setCountItem(0);
         }
     };
 
     return (
-        <div style={{  }}>
-            <div style={{ 
-                width: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'space-between', 
-                margin: 'auto' 
-            }}>
-                <Button onClick={handleRemove}>-</Button>
-                <span>{countItem}</span>
-                <Button onClick={handleAdd}>+</Button>
-                <Button onClick={handleAddProductToCart}>Añadir al Carrito</Button>
-            </div>
+        <div className="count">
+            <Button onClick={handleRemove}>-</Button>
+            <span>{countItem}</span>
+            <Button onClick={handleAdd}>+</Button>
+            <Button onClick={handleAddProductToCart}>Añadir al Carrito</Button>
         </div>
     );
 };
