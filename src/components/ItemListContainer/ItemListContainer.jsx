@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './ItemListContainer.css'
 
 import { LoadingComponent } from '../LoaderComponent/LoadingComponent';
 
@@ -9,7 +10,7 @@ import { Link } from 'react-router-dom';
 const ItemListContainer = ({ productsData }) => { 
 
   return (
-    <div style={{width: '100vw', height: '100vh', display: 'flex', flexWrap: 'wrap'}}>
+    <div className='mi-item-list-container'>
       {productsData && productsData.length > 0 ? (
         productsData.map(product => (
           <Card key={product.id} style={{ width: '18rem', margin: 10 }}>
@@ -19,9 +20,9 @@ const ItemListContainer = ({ productsData }) => {
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
-              <div>{product.price}</div>
+              <Card.Text>{product.price}</Card.Text>
               <Link to={`/item/${product.id}`}>
-                <Button variant="primary">Mas info</Button>
+                <Button variant="secondary" className='mi-button-mas-info'>Mas info</Button>
               </Link>
             </Card.Body>
           </Card>
