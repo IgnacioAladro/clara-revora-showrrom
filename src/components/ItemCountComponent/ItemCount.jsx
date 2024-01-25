@@ -4,6 +4,7 @@ import { useCartContext } from "../../context/CartContext.jsx";
 import './ItemCount.css'
 import Swal from 'sweetalert2'
 
+
 const ItemCount = ({productId}) => {
     const [ countItem, setCountItem ] = useState(0);
     const { addItemToCart } = useCartContext();
@@ -33,10 +34,10 @@ const ItemCount = ({productId}) => {
 
     return (
         <div className="count">
-            <Button onClick={handleRemove}>-</Button>
+            <Button variant="secondary" onClick={handleRemove}>-</Button>
             <span>{countItem}</span>
-            <Button onClick={handleAdd}>+</Button>
-            <Button onClick={handleAddProductToCart}>Añadir al Carrito</Button>
+            <Button variant="secondary" onClick={handleAdd}>+</Button>
+            <Button variant="secondary" onClick={handleAddProductToCart}>Añadir al Carrito</Button>
         </div>
     );
 };

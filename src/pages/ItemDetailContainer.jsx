@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import { useGetProductById } from '../hooks/useProducts';
 import ItemCount from '../components/ItemCountComponent/ItemCount';
+import FooterComponent from '../components/FooterComponent/FooterComponent';
 import './ItemDetailContainer.css'
 
 
@@ -24,9 +25,10 @@ export const ItemDetailContainer = () => {
               <Card.Text>{productData.description}</Card.Text>
               <div>{productData.price}</div>
               <ItemCount productId={productData.id} />
-              <Button variant="primary" style={{ margin: '1rem' }}>Añadir a deseados</Button>
+              <Button variant="secondary" style={{ margin: '1rem' }}>Añadir a deseados</Button>
           </Card.Body>
       </Card>
+      <FooterComponent />
     </div>
   );
 };

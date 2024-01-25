@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
+import { useGetProducts } from "../hooks/useProducts";
 
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import { useGetProducts } from "../hooks/useProducts";
+import FooterComponent from '../components/FooterComponent/FooterComponent';
+
 
 
 export const Home = () => {
@@ -12,6 +14,7 @@ export const Home = () => {
   return (
     <div>
       <ItemListContainer productsData={productsData} />
+      <FooterComponent />
     </div>
   );
 };
