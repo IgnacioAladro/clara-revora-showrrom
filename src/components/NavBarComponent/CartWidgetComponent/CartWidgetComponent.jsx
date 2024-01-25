@@ -1,9 +1,5 @@
 import { useCartContext } from '../../../context/CartContext';
-
-//------> Iconify
 import { Icon } from '@iconify/react';
-
-//------> Styles
 import './CartWidgetStyle.css'
 
 const CartWidgetComponent = () => {
