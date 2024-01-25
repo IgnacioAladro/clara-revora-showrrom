@@ -24,10 +24,10 @@ const ItemCount = ({productId}) => {
             addItemToCart(productId, countItem);
             setCountItem(0);
             Swal.fire({
-                position: "top-end",
+                position: "bottom-end",
                 icon: "success",
                 showConfirmButton: false,
-                timer: 2500
+                timer: 2500,
             });
         }
     };
